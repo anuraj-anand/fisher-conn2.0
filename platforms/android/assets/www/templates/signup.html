@@ -1,0 +1,58 @@
+<ion-view view-title="SignUp" name="SignUp-view" style="background-color: #458BA6 !important">
+<ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      </ion-nav-bar>
+  <ion-content class="padding">
+       <div class="list list-inset">
+       <label class="item item-input">
+              <input type="text" placeholder="Please Enter a username" ng-model="data.username">
+          </label>
+          <label class="item item-input">
+              <input type="text" placeholder="Please Enter Your Email Address" ng-model="data.Email">
+          </label>
+
+          <h5 style="text-align: center">--------------------   OR    ------------------------</h5>
+
+          <label class="item item-input">
+              <input type="text" placeholder="Plaese Enter Your Phone No" ng-model="data.password">
+          </label>
+
+			
+  		<label class="item item-input">
+				
+				<option value="">Select a Country --</option>
+
+  				<country-select ng-model="country" ng-options="country.code as country.name for country in countries">
+  				  	            </country-select>
+      </label>
+            
+          
+			<label class="item item-input">
+              <input type="text" placeholder="Please Select Your State" ng-model="data.state">
+          </label>
+
+
+          <label class="item qitem-input">
+              <input type="text" placeholder="Please Select Your City" ng-model="data.state">
+          </label>
+
+          <label class="item qitem-input">
+              <input type="text" placeholder="Customer Type " ng-model="data.type">
+
+  <select>
+  <option value="esseler">E-Seller</option>
+  <option value="vendor">Vendor</option>
+  <option value="buyer">Direct Buyer</option>
+  
+</select>
+          </label>
+
+
+
+
+      </div>
+      <button class="button button-block button-dark" ng-click="Recover()">Submit</button>
+     
+  </ion-content>
+</ion-view>

@@ -1,0 +1,72 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Cart</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+
+ <div class = "row">
+
+   <div class = "col">Item Name</div>
+   <div class = "col">Item Description</div>
+   <div class = "col">Item Price</div>
+   <div class = "col">Item Qty</div>
+
+   
+</div>
+ 
+
+
+<ion-item  >
+
+<ion-row  ng-repeat="item in itemfish">
+
+<div class = "row">       
+   <div class="col">{{item.id}}</div>
+   <div class = "col">{{item.name}}</div>
+    <div class = "col">{{item.price}}</div>
+    <button class="ion-plus"></button>
+   <div class = "col">0</div>
+ <button class="ion-minus"></button> 
+    
+           
+ </div>  
+
+
+
+</ion-row>
+
+</ion-item> 
+
+
+  </ion-list>
+
+<div class ="row">
+    <div class="col">Total Cart Price:</div>
+<div class = "col">{{fishprice}}</div>
+</div>
+
+
+<div class = "row">
+    <div class = "col">Shipping Charges:(2%)</div>
+    <div class = "col">{{shipcharge}}</div>
+ 
+</div>
+
+<div class = "row">
+    <div class = "col">Professional Taxes:(5%)</div>
+    <div class = "col">{{tax}}</div>
+</div>
+
+
+<div class = "row">
+    <div class = "col">Total Outstanding Amount</div>
+    <div class = "col">{{totaloutstand}}</div>
+</div>
+
+  <button class="button button-assertive ion-card" ng-click="cart(item)"> Check Out</button>
+  </ion-content>
+</ion-modal-view>

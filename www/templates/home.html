@@ -1,0 +1,131 @@
+<ion-view view-title="Home" name="Home View" ng-init="dashboardLoad()">
+
+<ion-side-menus>  
+<ion-side-menu-content>
+
+  <ion-header-bar class="bar-royal">
+
+
+<!--   <div class="alert alert-warning" role="alert" ng-show="getTotalItems() === 0">
+    Your cart is empty
+</div>
+ -->  <div class="buttons">
+
+
+
+      <button class="button icon button-clear ion-navicon-round"  ng-click="toggleLeft()"></button>
+      <h1 class="title">Item count {{count}} Cart Price ${{fishprice}}</h1> 
+      
+      <button class="button icon button-clear ion-bag"  ng-click="shoppingbag()"> 
+       
+      </button> 
+      <!-- <button class="button icon button-clear ion-search"  ng-click="vm.showFilterBar()"></button> -->
+      
+  </div>
+    
+  </ion-header-bar>
+
+<ion-content class="card-background-page">
+
+<label class="item item-input">
+  <i class="icon ion-search placeholder-icon"></i>
+
+
+  <input type="search" placeholder="Search Fisher Products" ng-model="searchitem"   />
+</label>
+   <ion-list>
+
+<!-- <div class = "row">
+
+   <div class = "col">Item Name</div>
+   <div class = "col">Item Description</div>
+   <div class = "col">Item Price</div>
+   <div class = "col">Item rating</div>
+   
+</div>
+ -->
+
+ <ion-item >
+<h1>{{product}}
+</h1>
+<ion-row ng-repeat="item in itemlist | filter:searchitem"  >
+    <ion-card >
+       <div class="item item-avatar">
+         <img src="img/fisher.png">
+      <h2>{{item.name}}</h2>
+   </div> 
+   <div class="card-title">{{item.id}}</div>
+        <div class = "col">{{item.price}}</div>
+        <button class="button button-dark" ng-click="cart(item)">Add to Cart</button>
+            
+   <ionic-ratings ratingsobj='ratingsObject'></ionic-ratings> </div>
+
+   </div>
+</ion-card>
+</ion-row>
+
+</ion-item> 
+
+ -->  
+
+
+<!-- <ion-item >
+
+<ion-row ng-repeat="item in itemlist | filter:searchitem"  >
+    <ion-card >
+       <div class="item item-avatar">
+         <img src="img/fisher.png">
+      <h2>{{item.name}}</h2>
+   </div> 
+   <div class="card-title">{{item.id}}</div>
+        <div class = "col">{{item.price}}</div>
+        <button class="button button-dark" ng-click="cart(item)">Add to Cart</button>
+            
+   <ionic-ratings ratingsobj='ratingsObject'></ionic-ratings> </div>
+
+   </div>
+</ion-card>
+</ion-row>
+
+</ion-item> 
+
+ -->  
+  
+  </ion-list>    
+</ion-content>
+ 
+
+</ion-side-menu-content>
+
+
+  <ion-side-menu side="left">
+
+
+  <ul class="list">
+          <div class="item item-avatar" style="size: 1200px">
+<!-- *            <img src="//ionicframework.com/img/docs/spengler.jpg"> -->
+            <img src="img/fisher.png"> 
+
+            <h2>Welcome Jarr!!</h2>
+            <p>Your Profile</p>
+          </div>
+          <a href="#/event/check-in" class="item icon-left ion-home" menu-close> Home</a>
+          <a href="" class="item icon ion-person-stalker" ng-click="sideAcctSett()"> Account Setting</a>
+          <a href="" class="item icon ion-gear-b" ng-click="sideAcctSett()" menu-close> Privacy Settings</a>
+          <a href="#/event/prices" class="item icon ion-clock" menu-close> Orders History</a>
+          <a href="#/event/prices" class="item icon ion-social-usd" menu-close> My Payments</a>
+          <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="logout()">Log out</a> 
+
+  </ul>
+
+
+</ion-side-menu>
+
+</ion-side-menus>
+
+</ion-view>
+
+
+
+
+

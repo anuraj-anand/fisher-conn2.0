@@ -1,0 +1,25 @@
+<ion-view view-title="Login" name="login-view" style="background-color: #458BA6 !important" ng-init="dashboardLoad()">
+             
+  <ion-content class="background">
+
+
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="username or mobile number" ng-model="data.username">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password">
+          </label>
+      </div>
+      <button class="button button-block button-dark" ng-click="loginSubmit()">Login</button>
+      <button class="button button-block button-royal" ng-click="signup()">Signup with Email Address</button>
+      <button class="button button button-positive" ng-click="FacebookLogin()">Continue With Facebook login</button>
+      <button class="button button button-assertive" ng-click="GoogleLogin()">Continue With Google+</button>
+      <br><br>
+      <button class="button button-clear button-dark" ng-click="forgotpassword()">Forgot Your Password??</button>
+      <h4>By signing up, I agree to Fisher Conn’s Terms of Service, Nondiscrimination Policy, Payments Terms of Service, Privacy Policy, E-seller Refund Policy, and Vendor Guarantee Terms.  </h4>
+
+      </ion-content>
+</ion-view>
+
+
